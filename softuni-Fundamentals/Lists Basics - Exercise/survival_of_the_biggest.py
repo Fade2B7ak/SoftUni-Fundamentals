@@ -11,3 +11,18 @@ for smallest in range(number):
 
 
 print(*final_list, sep =', ')
+
+#Functional Solving
+def survival(numbers_list, numbers_to_removes):
+    final_list = []
+
+    for numb in numbers_list:
+        final_list.append(int(numb))
+
+    for smallest in range(numbers_to_removes):
+        final_list.remove(min(final_list))
+
+    print(*final_list, sep=", ")
+
+
+survival(numbers_list=input().split(), numbers_to_removes=int(input()))
